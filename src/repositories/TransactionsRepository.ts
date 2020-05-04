@@ -45,23 +45,6 @@ class TransactionsRepository {
     );
     const total = income - outcome;
     return { income, outcome, total };
-    /* const somaIncomes = this.transactions.reduce(
-      ({ value: valueTotal }: Transaction, { value }: Transaction): any => {
-        return valueTotal + value;
-      },
-    );
-    const somaOutcomes = this.transactions.reduce(
-      ({ value: valueTotal }: Transaction, { value }: Transaction): any => {
-        return valueTotal + value;
-      },
-    );
-    const total = Number(somaIncomes) - Number(somaOutcomes);
-    const balance = {
-      income: Number(somaIncomes),
-      outcome: Number(somaOutcomes),
-      total,
-    };
-    return balance; */
   }
 
   public create({ title, value, type }: CreateTransaction): Transaction {
